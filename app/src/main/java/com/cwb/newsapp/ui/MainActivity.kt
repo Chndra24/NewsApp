@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val retrofit = RetrofitInstance.getRetrofitInstance()
 
         val service = retrofit.create(NewsApiService::class.java)
-        val repository = NewsRepository(service, "a150f07e68b34f058fd729d170a3bdbc")
+        val repository = NewsRepository(service, "YOUR_API")
         viewModel = ViewModelProvider(this, NewsViewModelFactory(repository))[NewsViewModel::class.java]
 
         setupRecyclerView()
